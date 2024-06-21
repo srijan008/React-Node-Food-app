@@ -1,0 +1,18 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .carousel,
+  .carousel-item,
+  .carousel-item-fullscreen {
+    height: 50vw;
+    width: 100vw;
+  }
+  
+  .carousel-item-fullscreen img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensures the image covers the item fully */
+  }
+  
