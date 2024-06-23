@@ -8,7 +8,7 @@ const MyOrder = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/myorder');
+                const response = await fetch('http://localhost:3003/api/myorder');
                 if (!response.ok) {
                     throw new Error('Failed to fetch orders');
                 }

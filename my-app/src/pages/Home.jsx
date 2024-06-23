@@ -28,7 +28,7 @@ const Home = () => {
   }, [searchText]); 
 
   const loadData = async () => {
-    let response = await fetch("http://localhost:3000/api/fooddata", {
+    let response = await fetch("http://localhost:3003/api/fooddata", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

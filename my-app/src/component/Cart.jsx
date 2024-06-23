@@ -14,7 +14,7 @@ const Cart = () => {
     const handleSendData = async (e) => {
     e.preventDefault();
     try {
-        const response = await fetch("http://localhost:3000/api/orderdata", {
+        const response = await fetch("/api/orderdata", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

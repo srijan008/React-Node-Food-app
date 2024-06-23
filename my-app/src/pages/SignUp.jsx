@@ -16,7 +16,7 @@ const CreateUserForm = () => {
         setError(null); // Clear previous errors
 
         try {
-            const response = await fetch('http://localhost:3000/api/createUser', {
+            const response = await fetch('http://localhost:3003/api/createUser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
