@@ -14,7 +14,7 @@ const LoginPage = () => {
         e.preventDefault();
         setError(null);
         try {
-            const response = await fetch('http://localhost:3003/api/login', {
+            const response = await fetch('https://backend-4bulcle1i-srijans-projects-5421643c.vercel.app/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

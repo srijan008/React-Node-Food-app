@@ -28,7 +28,7 @@ const Home = () => {
   }, [searchText]); 
 
   const loadData = async () => {
-    let response = await fetch("http://localhost:3003/api/fooddata", {
+    let response = await fetch("https://backend-4bulcle1i-srijans-projects-5421643c.vercel.app/api/fooddata", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -4,9 +4,17 @@ const OrderUser = require('./route/OrderUser')
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3003;
 const cors = require('cors');
-app.use(cors());
+const { METHODS } = require('http');
+app.use(cors(
+  {
+    origin: ["https://my-624bbbe0j-srijans-projects-5421643c.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+  
+));
 
 
 const mongo_URL = "mongodb+srv://srijan:121122@cluster0.grwvfmy.mongodb.net/gofoodmern?retryWrites=true&w=majority&appName=Cluster0";
@@ -48,7 +56,11 @@ app.use('/api', createUser );
 app.use('/api', displaydata );
 app.use('/api', OrderUser );
 
+app.get('/login', (req, res) => {
+  res.json("thaifofjaewof");
+});
+
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}!`);
+    console.log(`Example app listening on port ${port}!`);
 });

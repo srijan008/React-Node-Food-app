@@ -42,14 +42,13 @@ router.post('/createUser',
 
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
-
     try {
         const user = await User.findOne({ email });
 
         if (!user) {
             return res.status(401).json({ message: 'Invalid email or password' });
         }
-
+        
         const salt = user.salt;
         const hash = createHmac('sha256', salt).update(password).digest('hex');
 
@@ -65,7 +64,7 @@ router.post('/login', async (req, res) => {
         res.json({ success: true, authToken: token });
     } catch (error) {
         console.error('Login error:', error);
-        res.status(500).json({ message: 'Server error' });
+        res.status(500).json({ message: 'what is this error' });
     }
 });
 
