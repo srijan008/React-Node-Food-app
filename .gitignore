@@ -42,3 +42,4 @@ bower_components/
 yarn.lock
 pnpm-lock.yaml
 
+.vercel
