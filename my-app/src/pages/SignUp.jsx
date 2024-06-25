@@ -16,7 +16,7 @@ const CreateUserForm = () => {
         setError(null); // Clear previous errors
 
         try {
-            const response = await fetch('https://backend-4bulcle1i-srijans-projects-5421643c.vercel.app/api/createUser', {
+            const response = await fetch('https://foodapp-backend-2.onrender.com/api/createUser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -73,7 +73,7 @@ const CreateUserForm = () => {
                                 />
                             </Form.Group>
                             <Form.Group controlId="formPassword" className="mt-3">
-                                <Form.Label>Password</Form.Label>
+                                <Form.Label>Password(Passwords must be at least 6 characters)</Form.Label>
                                 <Form.Control
                                     type="password"
                                     placeholder="Password"
